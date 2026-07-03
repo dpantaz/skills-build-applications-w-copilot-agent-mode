@@ -109,3 +109,12 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+#root {
+  border-inline: 0;
+  margin: 0;
+  max-width: none;
+  min-height: 100vh;
+  text-align: left;
+  width: auto;
+}

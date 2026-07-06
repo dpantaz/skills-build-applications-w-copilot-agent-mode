@@ -1,6 +1,17 @@
-import ResourceState from './ResourceState'
-import useCollection from './useCollection'
+import ResourceState from './ResourceState.jsx'
+import useCollection from './useCollection.js'
 
+/**
+ * Users Component
+ *
+ * Displays a table of all users from the API.
+ * Fetches from: ${apiBaseUrl}/users/
+ *
+ * Handles:
+ * - Loading state with spinner message
+ * - Error state with error message
+ * - Empty array responses
+ */
 function Users() {
   const { items, loading, error } = useCollection('users')
 

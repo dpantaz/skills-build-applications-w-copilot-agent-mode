@@ -1,6 +1,17 @@
-import ResourceState from './ResourceState'
-import useCollection from './useCollection'
+import ResourceState from './ResourceState.jsx'
+import useCollection from './useCollection.js'
 
+/**
+ * Activities Component
+ *
+ * Displays a table of all user activities from the API.
+ * Fetches from: ${apiBaseUrl}/activities/
+ *
+ * Handles:
+ * - Loading state with spinner message
+ * - Error state with error message
+ * - Empty array responses
+ */
 function Activities() {
   const { items, loading, error } = useCollection('activities')
 

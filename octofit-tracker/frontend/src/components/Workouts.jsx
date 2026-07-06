@@ -1,6 +1,18 @@
-import ResourceState from './ResourceState'
-import useCollection from './useCollection'
+import ResourceState from './ResourceState.jsx'
+import useCollection from './useCollection.js'
 
+/**
+ * Workouts Component
+ *
+ * Displays cards for personalized workout suggestions from the API.
+ * Fetches from: ${apiBaseUrl}/workouts/
+ *
+ * Handles:
+ * - Loading state with spinner message
+ * - Error state with error message
+ * - Empty array responses
+ * - Workout metadata: focus area, difficulty, duration
+ */
 function Workouts() {
   const { items, loading, error } = useCollection('workouts')
 

@@ -1,6 +1,18 @@
-import ResourceState from './ResourceState'
-import useCollection from './useCollection'
+import ResourceState from './ResourceState.jsx'
+import useCollection from './useCollection.js'
 
+/**
+ * Leaderboard Component
+ *
+ * Displays ranked entries from the leaderboard API.
+ * Fetches from: ${apiBaseUrl}/leaderboard/
+ *
+ * Handles:
+ * - Loading state with spinner message
+ * - Error state with error message
+ * - Empty array responses
+ * - Ranking display with points
+ */
 function Leaderboard() {
   const { items, loading, error } = useCollection('leaderboard')
 

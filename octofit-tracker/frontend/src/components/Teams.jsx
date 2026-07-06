@@ -1,6 +1,18 @@
-import ResourceState from './ResourceState'
-import useCollection from './useCollection'
+import ResourceState from './ResourceState.jsx'
+import useCollection from './useCollection.js'
 
+/**
+ * Teams Component
+ *
+ * Displays cards for all teams from the API.
+ * Fetches from: ${apiBaseUrl}/teams/
+ *
+ * Handles:
+ * - Loading state with spinner message
+ * - Error state with error message
+ * - Empty array responses
+ * - Team metadata: captain email, member count
+ */
 function Teams() {
   const { items, loading, error } = useCollection('teams')
 
